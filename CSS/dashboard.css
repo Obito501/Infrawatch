@@ -1,0 +1,285 @@
+/* 🌍 Réinitialisation */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background: #f8f9fa;
+}
+
+/* 📌 SIDEBAR (Desktop) */
+.sidebar {
+    width: 220px;
+    background: #212529;
+    color: white;
+    height: 100vh;
+    padding: 20px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: block;
+}
+
+.side-header h3 {
+    margin-bottom: 20px;
+    font-size: 1.5em;
+}
+
+.side-header span {
+    color: #007bff;
+}
+
+.side-content .profile {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.profile-img {
+    width: 60px;
+    height: 60px;
+    margin: 0 auto 10px;
+    border-radius: 50%;
+    background-size: cover;
+    background-position: center;
+}
+
+.side-menu ul {
+    list-style: none;
+}
+
+.side-menu li {
+    margin-bottom: 15px;
+}
+
+.side-menu a {
+    color: white;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.side-menu a i {
+    margin-right: 10px;
+}
+
+.side-menu a.active,
+.side-menu a:hover {
+    background: #343a40;
+}
+
+/* 📌 NAVBAR MOBILE */
+.navbar-mobile {
+    display: none;
+    background-color: #212529;
+    padding: 10px 20px;
+    position: sticky;
+    top: 0;
+    z-index: 999;
+    color: white;
+}
+
+.navbar-container {
+    display: flex;
+    flex-direction: column;
+}
+
+.navbar-container .logo {
+    font-size: 1.4rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.navbar-container .logo span {
+    color: #007bff;
+}
+
+.navbar-container .nav-items {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.navbar-container .nav-items a {
+    background: #343a40;
+    padding: 6px 12px;
+    border-radius: 5px;
+    color: white;
+    text-decoration: none;
+    font-size: 0.95rem;
+}
+
+.navbar-container .nav-items a:hover,
+.navbar-container .nav-items a.active {
+    background: #007bff;
+    color: black;
+}
+
+/* 📌 CONTENU PRINCIPAL */
+.main-content {
+    margin-left: 220px;
+    padding: 20px;
+}
+
+.header-menu {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.notify-icon {
+    position: relative;
+    margin-right: 15px;
+}
+
+.notify-icon i {
+    font-size: 1.2rem;
+    color: #212529;
+}
+
+.user .bg-img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-size: cover;
+}
+
+/* 📑 TABLE */
+.records table {
+    width: 100%;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    border-collapse: collapse;
+}
+
+thead {
+    background: #212529;
+    color: white;
+}
+
+th, td {
+    padding: 12px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+/* 🌈 STATUTS */
+.status {
+    display: inline-block;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+.status.in-progress {
+    background: orange;
+    color: white;
+}
+
+.status.resolved {
+    background: green;
+    color: white;
+}
+.status.waiting {
+    background: #6c757d;
+    color: white;
+}
+
+/* 📊 STAT CARDS */
+.analytics {
+    display: flex;
+    gap: 20px;
+    margin: 20px 0;
+    flex-wrap: wrap;
+}
+
+.card {
+    background: #212529;
+    padding: 20px;
+    border-radius: 10px;
+    flex: 1 1 200px;
+    text-align: center;
+    color: white;
+}
+
+.card i {
+    font-size: 2em;
+    margin-bottom: 10px;
+}
+
+/* 📎 BOUTON DÉTAILS */
+.btn-detail {
+    text-decoration: none;
+    background-color: #007bff;
+    color: white;
+    padding: 6px 10px;
+    border-radius: 4px;
+    transition: background-color 0.3s;
+}
+
+.btn-detail:hover {
+    background-color: #0056b3;
+}
+
+/* 📱 RESPONSIVE - Mobile layout */
+@media (max-width: 768px) {
+    .sidebar {
+        display: none;
+    }
+
+    .navbar-mobile {
+        display: block;
+    }
+
+    .main-content {
+        margin-left: 0;
+        padding: 15px;
+    }
+
+    .analytics {
+        flex-direction: column;
+    }
+
+    /* Table responsive block style */
+    .records table,
+    .records thead,
+    .records tbody,
+    .records th,
+    .records td,
+    .records tr {
+        display: block;
+    }
+
+    .records thead {
+        display: none;
+    }
+
+    .records tr {
+        margin-bottom: 15px;
+        border: 1px solid #ccc;
+        border-radius: 8px;
+        overflow: hidden;
+        padding: 10px;
+        background: white;
+    }
+
+    .records td {
+        position: relative;
+        padding-left: 50%;
+        text-align: left;
+    }
+
+    .records td::before {
+        content: attr(data-label);
+        position: absolute;
+        left: 10px;
+        font-weight: bold;
+        color: #212529;
+    }
+}

@@ -1,0 +1,42 @@
+/* Conteneur des détails */
+.details {
+    background: #343a40;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+h2, h3 {
+    color: #17a2b8;
+}
+
+/* Statut du signalement */
+.status-label {
+    font-weight: bold;
+    padding: 5px 10px;
+    border-radius: 5px;
+}
+
+/* Styles par statut */
+.status-label.en_attente { background: orange; }
+.status-label.en_cours { background: blue; }
+.status-label.termine { background: green; }
+
+/* Photo */
+.photo-container {
+    margin-top: 15px;
+    text-align: center;
+}
+
+.photo-container img {
+    max-width: 100%;
+    border-radius: 10px;
+}
+
+/* Carte */
+#map {
+    width: 100%;
+    height: 400px;
+    margin-top: 15px;
+    border-radius: 10px;
+}

@@ -1,0 +1,312 @@
+/* 🌍 Reset & global */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+  background: #f1f1f1;
+  color: #212529;
+}
+
+/* 📌 Sidebar */
+.sidebar {
+  width: 230px;
+  background-color: #212529;
+  color: white;
+  min-height: 100vh;
+  padding: 20px 15px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  transition: left 0.3s ease;
+}
+
+.side-header h3 {
+  font-size: 22px;
+  color: #ffffff;
+  margin-bottom: 30px;
+}
+
+.side-header h3 span {
+  color: #4dabf7;
+}
+
+.profile {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.profile-img {
+  width: 70px;
+  height: 70px;
+  background-size: cover;
+  background-position: center;
+  border-radius: 50%;
+  margin: 0 auto 10px auto;
+}
+
+.profile h4 {
+  font-size: 16px;
+  margin-bottom: 5px;
+}
+
+.profile small {
+  font-size: 12px;
+  color: #ced4da;
+}
+
+.side-menu ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+.side-menu ul li {
+  margin-bottom: 20px;
+}
+
+.side-menu ul li a {
+  text-decoration: none;
+  color: white;
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.side-menu ul li a.active,
+.side-menu ul li a:hover {
+  color: #4dabf7;
+}
+
+/* 📄 Main Content - Desktop */
+.main-content {
+  margin-left: 230px;
+  padding: 20px 30px;
+  transition: margin-left 0.3s ease;
+}
+
+/* 📄 Main Content - Mobile */
+@media (max-width: 768px) {
+  .main-content {
+    margin-left: 0;
+    padding: 15px;
+  }
+
+  .main-content.shift {
+    margin-left: 230px;
+  }
+}
+
+/* 📎 Header */
+header {
+  background: #ffffff;
+  padding: 15px 30px;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
+}
+
+.header-menu {
+  display: flex;
+  align-items: center;
+  gap: 25px;
+}
+
+.notify-icon {
+  position: relative;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+.notify-icon .notify {
+  position: absolute;
+  top: -8px;
+  right: -10px;
+  background-color: #e74c3c;
+  color: white;
+  font-size: 10px;
+  padding: 2px 6px;
+  border-radius: 50%;
+}
+
+.user {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.user .bg-img {
+  width: 32px;
+  height: 32px;
+  background-size: cover;
+  background-position: center;
+  border-radius: 50%;
+}
+
+/* 📋 Page Header */
+.page-header {
+  margin-bottom: 20px;
+}
+
+.page-header h1 {
+  font-size: 24px;
+}
+
+.page-header small {
+  color: #6c757d;
+}
+
+/* 📊 Analytics */
+.analytics {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  margin-bottom: 30px;
+}
+
+.card {
+  background-color: white;
+  border-radius: 8px;
+  padding: 20px;
+  flex: 1 1 240px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+}
+
+.card-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 22px;
+  margin-bottom: 10px;
+}
+
+.card-head i {
+  font-size: 28px;
+  color: #4dabf7;
+}
+
+.card-progress small {
+  display: block;
+  margin-bottom: 5px;
+  color: #6c757d;
+}
+
+.card-indicator {
+  background-color: #e9ecef;
+  height: 6px;
+  border-radius: 6px;
+}
+
+.card-indicator .indicator {
+  height: 6px;
+  background-color: #4dabf7;
+  border-radius: 6px;
+}
+
+/* 📄 Table */
+.records {
+  overflow-x: auto;
+  background: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+}
+
+.records table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.records thead {
+  background-color: #f8f9fa;
+}
+
+.records th,
+.records td {
+  padding: 12px 15px;
+  text-align: left;
+  border-bottom: 1px solid #dee2e6;
+  color: #343a40;
+}
+
+.records th {
+  color: #495057;
+}
+
+.records td i {
+  margin-right: 8px;
+  cursor: pointer;
+  color: #4dabf7;
+}
+
+/* ✅ Statuts */
+.status {
+  padding: 4px 10px;
+  border-radius: 12px;
+  font-size: 13px;
+  font-weight: 600;
+  color: white;
+  display: inline-block;
+}
+
+.status.new {
+  background-color: #f39c12;
+}
+
+.status.in-progress {
+  background-color: #3498db;
+}
+
+.status.resolved {
+  background-color: #2ecc71;
+}
+
+/* 📎 Bouton Détails */
+.btn-detail {
+  background-color: #3498db;
+  color: white;
+  padding: 5px 10px;
+  border-radius: 5px;
+  text-decoration: none;
+  font-size: 0.9em;
+  transition: background 0.3s ease;
+}
+
+.btn-detail:hover {
+  background-color: #2980b9;
+}
+
+/* ✅ Burger Menu Button (mobile only) */
+.menu-toggle {
+  position: fixed;
+  top: 15px;
+  left: 15px;
+  font-size: 22px;
+  background-color: #212529;
+  color: white;
+  padding: 8px 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  z-index: 1100;
+  display: none;
+}
+
+@media (max-width: 768px) {
+  .menu-toggle {
+    display: block;
+  }
+
+  .sidebar {
+    left: -250px;
+  }
+
+  .sidebar.open {
+    left: 0;
+  }
+}

@@ -1,0 +1,80 @@
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  margin: 0;
+  background-color: #f9f9f9;
+  color: #333;
+}
+
+.contact-hero {
+  background: url('../img/photo-1522071820081-009f0129c71c.jpg') center/cover no-repeat;
+  padding: 5rem 2rem;
+  text-align: center;
+  color: white;
+}
+
+.contact-hero h1 {
+  font-size: 2.5rem;
+}
+
+.contact-section {
+  padding: 4rem 2rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  justify-content: center;
+}
+
+.contact-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  max-width: 1100px;
+  width: 100%;
+  justify-content: space-between;
+}
+
+.form-side, .info-side {
+  flex: 1 1 450px;
+  background: white;
+  padding: 2rem;
+  border-radius: 10px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+.form-side input, .form-side textarea {
+  width: 100%;
+  margin-bottom: 1rem;
+  padding: 0.8rem;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.form-side button {
+  background-color: #333;
+  color: white;
+  padding: 0.8rem 1.5rem;
+  border: none;
+  border-radius: 5px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.form-side button:hover {
+  background-color: white;
+  color: #333;
+  border-top: #333;
+}
+
+.info-side ul {
+  padding: 0;
+  list-style: none;
+}
+
+.info-side li a {
+  color: #004e89;
+  text-decoration: none;
+}
+
+.info-side li a:hover {
+  text-decoration: underline;
+}
