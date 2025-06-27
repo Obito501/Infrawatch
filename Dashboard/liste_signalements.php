@@ -106,7 +106,7 @@ if (!isset($_SESSION['role']) || $_SESSION['role'] !== 'admin') {
 document.getElementById('recherche').addEventListener('keyup', function () {
     const q = this.value;
     const xhr = new XMLHttpRequest();
-    xhr.open('GET', '../AJAX/recherche_signalements.php?q=' + encodeURIComponent(q), true);
+    xhr.open('GET', '../PHP/recherche_signalements.php?q=' + encodeURIComponent(q), true);
     xhr.onload = function () {
         document.getElementById('resultats-signalements').innerHTML = this.responseText;
     };

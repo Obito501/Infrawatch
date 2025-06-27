@@ -1,3 +1,8 @@
+<?php
+ini_set('display_errors', 1);
+error_reporting(E_ALL);
+?>
+
 <?php require_once 'includes/init.php';
 require 'BD/connect.php';
 

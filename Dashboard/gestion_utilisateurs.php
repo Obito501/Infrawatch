@@ -161,7 +161,7 @@ unset($_SESSION['message']);
 document.getElementById('recherche').addEventListener('keyup', function () {
     const q = this.value;
     const xhr = new XMLHttpRequest();
-    xhr.open('GET', '../AJAX//recherche_utilisateurs.php?q=' + encodeURIComponent(q), true);
+    xhr.open('GET', '../PHP/recherche_utilisateurs.php?q=' + encodeURIComponent(q), true);
     xhr.onload = function () {
         document.getElementById('resultats-utilisateurs').innerHTML = this.responseText;
     };
